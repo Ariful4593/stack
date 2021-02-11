@@ -8,11 +8,11 @@ int is_balanced(char input[])
     len = strlen(input);
 
     for(i = 0; i < len; i++){
-        if(input[i] == '{' || input[i] == '(' || input[i] == '['){
+        if(input[i] == '('){
             stack[top] = '(';
             top++;
            }
-        else if(input[i] == '}' || input[i] == ')' || input[i] == ']'){
+           else if(input[i] == ')'){
             if(top == 0){
                 return 0;
             }
